@@ -67,7 +67,7 @@ export const pagination = async (options: PaginationOptions) => {
          return ([3, 4]).includes(type) && currentPage === embeds.length;
       }
       
-      let names: ButtonsTypes[] = [2, 3];
+      let names: ButtonsTypes[] = [ButtonTypes.previous, ButtonTypes.next, ButtonTypes.link];
       if (fastSkip) names = [1, ...names, 4];
       if (pageTravel) names.push(5);
       
