@@ -73,7 +73,8 @@ export const ButtonTypes = {
    previous: 2,
    next: 3,
    last: 4,
-   number: 5
+   number: 5,
+   link: 6
 } as const;
 
 export const ButtonStyles = {
@@ -94,4 +95,5 @@ export interface Buttons {
    style: ButtonsStyles
    label?: string | null
    emoji?: string | null
+   link?: string | null
 }

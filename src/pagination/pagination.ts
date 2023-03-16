@@ -79,6 +79,7 @@ export const pagination = async (options: PaginationOptions) => {
                .setStyle(getButtonData(type)?.style || defaultStyles[resolveButtonName(type)]);
             if (getButtonData(type)?.emoji !== null) embed.setEmoji(getButtonData(type)?.emoji || defaultEmojis[resolveButtonName(type)])
             if (getButtonData(type)?.label) embed.setLabel(getButtonData(type)?.label);
+            if (getButtonData(type)?.link) embed.setURL(getButtonData(type)?.link);
             accumulator.push(embed);
             return accumulator;
          },
